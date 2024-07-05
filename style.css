@@ -1,0 +1,616 @@
+/* 
+
+screen < 576px => 100%            xs
+screen >= 576px => 540px          sm
+screen >= 768px => 720px          md
+screen >= 992px => 960px          lg
+screen >= 1200px => 1140px        xl
+screen >= 1400px => 1320px        xxl
+
+nav-link-font-size: 18px
+nav-link-font-family: Lora medium
+nav-link-letter-spacing: 1.5%;
+nav-item-spacing: 35px;
+nav-item-color: #757575
+nav-item-color::active::hover: #000000
+
+header-font-family: Lora bold;
+header-text-color: #454545;
+header-text-letter-spacing: 2%;
+
+body-col: #f7f7f7;
+body-text-color: #454545;
+body-text-size: 20px;
+body-text-letter-spacing: 1%;
+body-text-line-height: 30;
+body-text-font-family: inra, light300;
+
+yellowtint => #ffc727
+
+
+*/
+
+/* Browser reset-style */
+html, body, header, nav, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+.h-icon {
+    display: none;
+}
+
+/* Utils */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', 'Inria Serif', 'Times New Roman', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 2.875rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.bg-light {
+    background-color: #fdfdfd;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1140px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a.btn, button.btn, .nav-items a.btn {
+    font-family: 'Lora', 'Inria Serif', 'Times New Roman', serif;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 7px 25px;
+    border-radius: 6px;
+}
+
+.nav-items a.btn-primary, .btn-primary {
+    color: #fff;
+    background-color: #313131;
+    border: 1px solid #313131;
+}
+
+.nav-items a.btn-primary:hover, .btn-primary:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.nav-items a.btn-outline, .btn-outline {
+    color: #313131;
+    background-color: #fdfdfd;
+    border: 1px solid #313131;
+}
+
+.nav-items a.btn-outline:hover, .btn-outline:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.t-highlight {
+    color: #ffc727;
+    font-weight: 600;
+    background-color: #fff;
+}
+
+.t-right {
+    text-align: right;
+}
+
+section {
+    margin-top: 60px;
+    padding-top: 20px;
+}
+
+section .left {
+    margin-right: 25px;
+}
+
+section .right {
+    margin-left: 25px;
+}
+
+section p {
+    font-weight: 400;
+}
+
+section h2 {
+    text-transform: capitalize;
+    position: relative;
+}
+
+section h2:after {
+    content: " ";
+    height: 3px;
+    width: 50%;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.caption {
+    display: block;
+    font-size: 12px;
+}
+
+.card-light {
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, .1);
+}
+
+/* Body style & Headers*/
+body {
+    background-color: #f7f7f7;
+    color: #454545;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-family: 'Inria Serif', 'Lora', 'Times New Roman', serif;
+    font-weight: 300;
+}
+
+/* Header style */
+header {
+    padding: 15px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.logo-link {
+    width: 180px;
+    margin-right: 50px;
+}
+
+.nav-menu.flex {
+    flex: 3;
+}
+
+.nav-menu ul.nav-items a.btn.btn-outline {
+    margin-right: 0;
+}
+
+.nav-items a {
+    font-family: 'Lora', 'Inria Serif', 'Times New Roman', serif;
+    font-size: 16px;
+    color: #757575;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 5px;
+    margin: 0 12px;
+    letter-spacing: 1;
+}
+
+a:hover, .nav-items a.active {
+    color: #000;
+}
+
+/* Section hero */
+.hero {
+    min-height: 70vh;
+    margin-top: 0;
+}
+
+.hero .container {
+    margin: 50px auto 0;
+    padding: 30px 15px;
+}
+
+.hero .headline {
+    margin-right: 50px;
+}
+
+.headline .block-intro {
+    margin-bottom: 50px;
+}
+
+.headline ul.flex {
+    justify-content: start;
+}
+
+.cta-block li .btn-primary {
+    margin-right: 30px;
+}
+
+.hero .headline h1 {
+    line-height: 1.2;
+    margin: 10px 0 30px;
+}
+
+.hero .block-intro p {
+    line-height: 2;
+}
+
+.hero .headline .name {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Inria';
+}
+
+/* Section about */
+section.about .container {
+    background: url('/legrandev/media/illustration_coffee.svg') bottom right / 400px 400px no-repeat;
+}
+
+/* Section portfolio */
+
+
+/* Section pitch video */
+
+.pitch-script p {
+    font-size: 14px;
+}
+
+/* Section contact */
+.contact {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.contact .container {
+    max-width: 800px;
+}
+
+.contact h2 {
+    text-align: center;
+    position: relative;
+}
+
+.contact h2:before {
+    content: " ";
+    height: 3px;
+    width: 300px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.contact h2:after {
+    content: " ";
+    height: 3px;
+    width: 300px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+/* .social-media.flex {
+    flex-direction: column;
+} */
+
+.social-media .s-icon {
+    margin: 0 15px;
+    width: 90px;
+    padding: 15px;
+    text-align: center;
+}
+
+.social-media img {
+    width: 70px;
+    margin: 0 auto 15px;
+}
+
+.social-media>div {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.social-media a {
+    color: #757575;
+}
+
+.social-media a:hover {
+    color: #000;
+}
+
+/* Footer */
+footer {
+    background-color: #313131;
+    padding: 10px 0;
+    color: #f7f7f7;
+    margin-top: 40px;
+}
+
+.contact-block .social-media {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 33%;
+}
+
+.social-media .s-icon {
+    margin: 0 15px 30px;
+}
+
+/* Media queries */
+@media only screen and (max-width: 992px) {
+    .container {
+        max-width: 900px;
+    }
+
+    nav .nav-menu ul {
+        display: block;
+    }
+
+    nav .nav-menu ul .btn-primary {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    nav .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: none;
+        opacity: 0;
+        min-height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 100px;
+        transition: .4s;
+    }
+
+    nav .nav-menu.is-active {
+        display: block;
+        opacity: 1;
+        z-index: 3;
+    }
+
+    .nav-menu ul.nav-items a.btn.btn-outline {
+        margin-right: auto;
+    }
+
+    nav .nav-menu ul a {
+        width: 100%;
+        margin: 0 auto 0;
+        max-width: fit-content;
+        text-align: center;
+    }
+
+    nav .h-icon {
+        cursor: pointer;
+        display: block;
+        color: #454545;
+        z-index: 3;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .container {
+        max-width: 780px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    .personal-pitch-block {
+        flex-flow: wrap-reverse;
+    }
+
+    section.pitch .pitch-video, section.pitch .pitch-script {
+        flex-basis: 100%;
+        margin: 0 0 30px 0;
+    }
+
+    section .right, section .left {
+        flex-basis: 100%;
+    }
+
+    .contact .container {
+        max-width: 500px;
+    }
+
+    section.pitch h2:after {
+        width: 30%;
+    }
+
+    .contact h2:before {
+        width: 150px;
+    }
+
+    .contact h2:after {
+        width: 150px;
+    }
+
+    .contact .contact-block {
+        flex-flow: wrap-reverse;
+    }
+
+    .contact-block .social-media {
+        flex-basis: 100%;
+    }
+
+    section .social-illustration.right {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .container {
+        max-width: 670px;
+    }
+
+    .hero .container {
+        margin: 30px auto 0;
+    }
+
+    .hero .headline {
+        margin-right: 10px;
+    }
+
+    .hero .block-intro p {
+        line-height: 1.7;
+    }
+
+    .about-block .flex-2 {
+        flex: 3;
+    }
+
+    section .block .left, section .block .right {
+        margin: 0 0 30px 0;
+    }
+
+    section .social-illustration.right {
+        margin: 0 auto;
+    }
+
+    .social-media .s-icon {
+        margin: 0 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    nav .logo-link {
+        width: 150px;
+    }
+
+    .hero .illustration {
+        display: none;
+    }
+
+    .hero .headline {
+        margin-right: 0;
+    }
+
+    section.pitch h2:after {
+        width: 10%;
+    }
+
+    section {
+        margin-top: 40px;
+    }
+
+    section.about .container {
+        background: unset;
+    }
+
+    .about-block {
+        display: block;
+    }
+
+    .contact h2:before {
+        width: 50px;
+    }
+
+    .contact h2:after {
+        width: 50px;
+    }
+}
+
+.h-icon {
+    position: relative;
+    width: 35px;
+    height: 35px;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.h-icon:after, .h-icon:before, .h-bar {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #454545;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.h-icon.is-active:after {
+    transform: rotate(45deg) translate(-8px, -5px);
+}
+
+.h-icon.is-active:before {
+    transform: rotate(-45deg) translate(-7px, 3px);
+}
+
+.h-icon.is-active .h-bar {
+    opacity: 0;
+}
+
+.about-block.flex ul li {
+    list-style: disc;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.about-block.flex ul {
+    margin-left: 20px;
+}
